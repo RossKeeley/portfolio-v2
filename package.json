@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-nodejs-expressjs-v4",
+  "version": "1.0.0",
+  "description": "Fourth version of a personal web portfolio",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rosskeeley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
