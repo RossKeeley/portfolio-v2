@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
 /* Makes sure that the padding and border are included in the total width and height of the elements */
 * {
   box-sizing: border-box;
 }
 
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-  border: 1px solid red;
+body {
+  margin: 0px;
+  font-family: 'Poppins';
+}
+
+/* Makes sure that the padding and border are included in the total width and height of the elements */
+* {
+  box-sizing: border-box;
 }
 
 .col-1 {width: 8.33%;}
@@ -28,130 +37,11 @@
   display: table;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-#logo {
-  width: 40%
-}
-
-#navbar {
-  width: 60%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
 body {
   margin: 0px;
 }
 
-/* Makes sure that the padding and border are included in the total width and height of the elements */
-* {
-  box-sizing: border-box;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-#logo {
-  width: 40%
-}
-
-#navbar {
-  width: 60%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-
-body {
-  margin: 0px;
-}
-
+/* -------------- HEADER -------------- */
 /* Main header container */
 header {
   top: 0;
@@ -180,7 +70,14 @@ header {
 
 /* Right side container */
 /* Navigation menu unordered list */
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #menu {
+  padding: 0;
+  list-style-type: none;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -203,6 +100,13 @@ header {
   text-decoration: none;
 }
 
+/* -------------- FOOTER -------------- */
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+/* -------------- BANNER -------------- */
 /* Main banner box */
 #banner {
   /* Background image position and style */
@@ -220,7 +124,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  /* padding: 0 100px; */
 }
 
 /* Name and title */
@@ -232,7 +136,7 @@ header {
 /* Main title */
 #banner h1 {
   color: #383737;
-  font-size: 75px;
+  font-size: 8vw;
   line-height: 65px;
   background-color: rgb(255 255 255);
   padding: 5px;
@@ -246,57 +150,52 @@ header {
   line-height: 25px;
   background-color: rgb(255 255 255);
   padding: 5px;
-  width: 310px;
   margin: 15px 0px;
 }
 
+/* --------------- ABOUT --------------- */
 /* Main container for the about section */
 /* This encloses the About Me and Skills containers */
 #about {
-  padding: 50px 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
   flex-direction: row;
   background-color: #fff;
-  flex-wrap: wrap;
 }
 
 /* Containers for About Me and Skills sections */
-.container {
-  width: 40%;
-  min-width: 440px;
+#about .container {
   padding: 20px 15px 30px;
 }
 
 /* Styles for the About Me container */
-.container {
-  /* Div containing the About Me description paragraphs */
-  .description {
-    top: 50%;
-    p {
-      margin-bottom: 15px;
-    }
-  }
-  /* Container for the contact buttons */
-  .contact {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 25px;
-    height: 100px;
-    a {
-      display: inline-block;
-      font-size: 40px;
-      color: #000;
-      background-color: #fff;
-      margin: 0px 20px;
-      transition: 0.5s;
-    }
-    a:hover {
-      transform: scale(1.3);
-    }
-  }
+/* Div containing the About Me description paragraphs */
+.container .description {
+  top: 50%;
+}
+
+.container .description p {
+  margin-bottom: 15px;
+}
+
+/* Container for the contact buttons */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 25px;
+  height: 100px;
+}
+
+.contact a {
+  display: inline-block;
+  font-size: 40px;
+  color: #000;
+  background-color: #fff;
+  margin: 0px 20px;
+  transition: 0.5s;
+}
+
+.contact a:hover {
+  transform: scale(1.3);
 }
 
 /* Styles for the Skills container */
@@ -305,25 +204,152 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* Individual Cards */
-  .skills-card {
-    width: 30%;
-    margin: 0px 10px;
-    padding: 15px;
-    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 12%);
-    h3 {
-      font-weight: 600;
-      letter-spacing: 1px;
-      margin-top: 5px;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-      font-weight: 500;
-      margin: 6px;
-      padding: 0 5px;
-      line-height: 35px;
-      background-color: #59db2a47;
-    }
+}
+
+/* Individual Cards */
+#skills-card {
+  margin: 0px 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 12%);
+}
+
+#skills-card .title {
+  text-align: center;
+}
+
+#skills-card h3 {
+  font-weight: 600;
+  letter-spacing: 5px;
+  margin-top: 5px;
+  text-align: center;
+
+}
+#skills-card p {
+  text-align: center;
+  font-weight: 500;
+  margin: 6px;
+  padding: 0 5px;
+  line-height: 35px;
+  background-color: #59db2a47;
+}
+
+/* --------------- MEDIA QUIRIES --------------- */
+.row::after {
+  content: "";
+  clear: both;
+  /* display: table; */
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  /* width: 100%; */
+  float: left;
+  padding: 15px;
+}
+
+/* #logo {
+  width: 30%
+}
+
+#navbar {
+  width: 70%;
+} */
+
+@media only screen and (max-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+
+  #banner {
+    padding: 0 15px;
+    height: 40vh;
   }
+
+  /* #banner h1 {
+    font-size: 50px;
+    line-height: 40px;
+  } */
+
+  #banner h2 {
+    font-size: 21px;
+    line-height: 15px;
+    margin: 15px auto;
+  }
+
+  #about {
+    padding: 10px 20px;
+  }
+
+  #skills-card p {
+    font-weight: 500;
+    /* font-size: 10px; */
+    /* margin: 1px; */
+    /* padding: 0 5px; */
+    /* line-height: 35px; */
+    /* background-color: #59db2a47; */
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  #banner {
+    padding: 0 100px;
+  }
+
+  /* #banner h1 {
+    font-size: 75px;
+    line-height: 65px;
+    background-color: rgb(255 255 255);
+
+  } */
+
+  #banner h2 {
+    /* color: #383737; */
+    font-size: 30px;
+    /* line-height: 25px;
+    background-color: rgb(255 255 255);
+    padding: 5px;
+    margin: 15px 0px; */
+  }
+
+  #about {
+    padding: 50px 100px;
+  }
+}
+
+@media only screen and (min-width: 1190px) {
+  .col-l-1 {width: 8.33%;}
+  .col-l-2 {width: 16.66%;}
+  .col-l-3 {width: 25%;}
+  .col-l-4 {width: 33.33%;}
+  .col-l-5 {width: 41.66%;}
+  .col-l-6 {width: 50%;}
+  .col-l-7 {width: 58.33%;}
+  .col-l-8 {width: 66.66%;}
+  .col-l-9 {width: 75%;}
+  .col-l-10 {width: 83.33%;}
+  .col-l-11 {width: 91.66%;}
+  .col-l-12 {width: 100%;}
 }
